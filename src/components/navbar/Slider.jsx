@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons"
 
 // styles imports
-import { A, Button } from "./styles"
-import { Flex } from "../../global/styles.global"
+import { A } from "./styles"
+import { Flex, Button } from "../../global/styles.global"
 
 const Slider = ({ slider, setSlider }) => {
   return (

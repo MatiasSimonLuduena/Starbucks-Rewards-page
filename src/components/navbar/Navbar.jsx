@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // styles imports
-import { Nav, A, Button, Bars } from "./styles"
-import { Flex } from "../../global/styles.global"
+import { Nav, A, Bars } from "./styles"
+import { Flex, Button, Show } from "../../global/styles.global"
 
 // components
 import Icon from "./Icon"
@@ -21,13 +21,15 @@ const Navbar = ({ setSlider, slider }) => {
       </Flex>
       <Flex width840>
         <A hover><FontAwesomeIcon icon={faLocationDot}/> Find a store</A>
-        <Button>Sign in</Button>
-        <Button black>Join now</Button>
+        <Button m10>Sign in</Button>
+        <Button black m10>Join now</Button>
       </Flex>
 
-      <Bars onClick={() => setSlider(slider === "in" ? "out" : "in")}>
-        <FontAwesomeIcon icon={slider === "in" ? faXmark : faBars}/>
-      </Bars>
+      <Show w840>
+        <Bars onClick={() => setSlider(slider === "in" ? "out" : "in")}>
+          <FontAwesomeIcon icon={slider === "in" ? faXmark : faBars}/>
+        </Bars>
+      </Show>
     </Nav>
   )
 }

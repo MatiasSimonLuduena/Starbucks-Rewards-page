@@ -16,7 +16,7 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     z-index: 3;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -46,24 +46,7 @@ export const A = styled.a`
     `}
 `
 
-export const Button = styled.button`
-    padding: 8px 18px;
-    margin: 0 10px;
-    border-radius: 20px;
-    font-size: .95em;
-    font-weight: 600;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
-
-    ${props => props.black && css`
-        color: white;
-        background-color: black;
-    `}
-`
-
 export const Bars = styled.div`
-    display: none;
     font-size: 1.2em;
     color: rgb(50, 50, 50);
     cursor: pointer;
@@ -73,9 +56,5 @@ export const Bars = styled.div`
 
     &:hover {
         background-color: rgb(235, 235, 235);
-    }
-
-    @media (max-width: 840px) {
-        display: block;
-    }  
+    } 
 `
