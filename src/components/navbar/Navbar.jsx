@@ -19,7 +19,7 @@ const Navbar = ({ setSlider, slider }) => {
           <A uppercase hover>Gift cards</A>
         </Flex>
       </Flex>
-      <Flex width840>
+      <Flex width840 align_center>
         <A hover><FontAwesomeIcon icon={faLocationDot}/> Find a store</A>
         <Button m10>Sign in</Button>
         <Button black m10>Join now</Button>

@@ -19,13 +19,13 @@ const Slider = ({ slider, setSlider }) => {
     >
       <div className={styles.containerIn} onClick={e => e.stopPropagation()}>
         <div style={{ height: 100 }}></div>
-        <Flex column>
+        <Flex column start>
           <A slide>Menu</A>
           <A slide>Rewards</A>
           <A slide>Gift cards</A>
         </Flex>
         <br/><hr/><br/>
-        <Flex column>
+        <Flex column start>
         <div>
           <Button>Sign in</Button>
           <Button black>Join now</Button>

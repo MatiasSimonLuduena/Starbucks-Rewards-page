@@ -2,9 +2,16 @@ import styled, { css } from "styled-components";
 
 export const Flex = styled.div`
     display: flex;
-    align-items: center;
 
-    ${props => props.center && css`
+    ${props => props.align_center && css`
+        align-items: center;
+    `}
+
+    ${props => props.align_start && css`
+        align-items: start;
+    `}
+
+    ${props => props.justify_center && css`
         justify-content: center;
     `}
 
@@ -12,15 +19,51 @@ export const Flex = styled.div`
         justify-content: space-between;
     `}
 
+    ${props => props.column && css`
+        flex-direction: column;
+    `}
+
+    ${props => props.container && css`
+        margin: 8%;
+
+        @media (max-width: 768px) {
+            margin: 8% 2%;
+        }
+    `}
+
+    ${props => props.m1 && css`
+        margin: 15px;
+    `}
+
+    // Media Queries
+    ${props => props.column768 && css`
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    `}
+
+    ${props => props.row768 && css`
+        @media (max-width: 768px) {
+            flex-direction: row;
+        }
+    `}
+
+    ${props => props.justify_start768 && css`
+        @media (max-width: 768px) {
+            justify-content: start;
+        }
+    `}
+
+    ${props => props.align_start768 && css`
+        @media (max-width: 768px) {
+            align-items: start;
+        }
+    `}
+
     ${props => props.width840 && css`
         @media (max-width: 840px) {
             display: none;
         }  
-    `}
-
-    ${props => props.column && css`
-        flex-direction: column;
-        align-items: start;
     `}
 `
 
@@ -32,6 +75,7 @@ export const Button = styled.button`
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
+    margin: 0 10px;
 
     ${props => props.black && css`
         color: white;
