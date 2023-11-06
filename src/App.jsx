@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar"
 import Slider from "./components/navbar/Slider"
 import Header from "./components/header/Header"
 import Getting from "./components/getting/Getting"
+import Favorites from "./components/favorites/Favorites"
 
 function App() {
   const [slider, setSlider] = useState(false);
@@ -15,6 +16,7 @@ function App() {
       <Navbar setSlider={setSlider} slider={slider}/>
       <Header/>
       <Getting/>
+      <Favorites/>
     </>
   )
 }

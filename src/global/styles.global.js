@@ -16,6 +16,7 @@ export const Flex = styled.div`
     `}
 
     ${props => props.between && css`
+        width: 100%;
         justify-content: space-between;
     `}
 
@@ -45,6 +46,13 @@ export const Flex = styled.div`
     ${props => props.row768 && css`
         @media (max-width: 768px) {
             flex-direction: row;
+        }
+    `}
+
+    ${props => props.between768 && css`
+        @media (max-width: 768px) {
+            width: 100%;
+            justify-content: space-between;
         }
     `}
 
@@ -86,7 +94,6 @@ export const Button = styled.button`
         color: white;
         background-color: #008248;
         border: none;
-        margin: 35px 0 15px;
     `}
 
     ${props => props.greenwhite && css`
@@ -97,6 +104,10 @@ export const Button = styled.button`
 
     ${props => props.m10 && css`
         margin: 0 10px;
+    `}
+
+    ${props => props.m30 && css`
+        margin: 35px 0 15px;
     `}
 `
 

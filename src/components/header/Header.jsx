@@ -16,10 +16,10 @@ const Header = () => {
           <Span>Join now to start earning Rewards.</Span>
         </div>
         <Hidden>
-          <a><Button green>Join now</Button></a>
+          <a><Button green m30>Join now</Button></a>
         </Hidden>
         <Show>
-          <a><Button green>Join the app</Button></a>
+          <a><Button green m30>Join the app</Button></a>
         </Show>
         <Hidden>
           <Span>Or <A>join in the app</A> for the best experience</Span>
