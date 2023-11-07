@@ -7,6 +7,8 @@ import Header from "./components/header/Header"
 import Getting from "./components/getting/Getting"
 import Favorites from "./components/favorites/Favorites"
 import Extras from "./components/extras/Extras"
+import Cashorcard from "./components/cashorcard/Cashorcard"
+import Coming from "./components/coming/Coming"
 
 function App() {
   const [slider, setSlider] = useState(false);
@@ -19,6 +21,8 @@ function App() {
       <Getting/>
       <Favorites/>
       <Extras/>
+      <Cashorcard/>
+      <Coming/>
     </>
   )
 }
