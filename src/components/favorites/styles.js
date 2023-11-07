@@ -34,8 +34,7 @@ export const Card = styled.div`
     `}
 
     @media (max-width: 768px) {
-        height: auto;
-        align-items: start;
+        height: 500px;
     }
 `
 
@@ -146,5 +145,13 @@ export const Img = styled.img`
 
     @media (max-width: 768px) {
         width: 100%;
+    }
+`
+
+export const Div = styled.img`
+    height: 300px;
+
+    @media (max-width: 768px) {
+        height: 500px;
     }
 `

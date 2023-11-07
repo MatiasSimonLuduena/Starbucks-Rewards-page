@@ -1,5 +1,5 @@
 import { 
-    Container, Card, Card_div, ContainerCard, Width50, H2, Button, Img, Star, H3, P
+    Container, Card, Card_div, ContainerCard, Width50, H2, Button, Img, Star, H3, P, Div
 } from "./styles"
 import { Flex } from "../../global/styles.global"
 
@@ -39,6 +39,7 @@ const Favorites = () => {
                 ))
             }
         </ContainerCard>
+        <Div></Div>
     </Container>
   )
 }

@@ -16,9 +16,11 @@ export const P = styled.p`
     color: rgb(80, 80, 80);
     font-weight: 500;
     letter-spacing: .5px;
-    margin: 15px 0;
     text-align: center;
     line-height: 1.5em;
+    width: 100%;
+    max-width: 720px;
+     margin: 15px auto;
 
     a {
         color: #008248;
