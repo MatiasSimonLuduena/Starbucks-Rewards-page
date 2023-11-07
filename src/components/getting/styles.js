@@ -20,7 +20,7 @@ export const P = styled.p`
     line-height: 1.5em;
     width: 100%;
     max-width: 720px;
-     margin: 15px auto;
+    margin: 15px auto;
 
     a {
         color: #008248;

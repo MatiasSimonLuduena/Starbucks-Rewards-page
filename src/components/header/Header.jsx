@@ -1,6 +1,3 @@
-// components
-import Fixed from './Fixed';
-
 // styles
 import { HeaderContainer, H2, Span, A } from './styles';
 import { Button, Hidden, Show } from "../../global/styles.global"
@@ -8,8 +5,6 @@ import { Button, Hidden, Show } from "../../global/styles.global"
 const Header = () => {
   return (
     <div>
-      <div style={{ height: 100 }}></div>
-      <Fixed/>
       <HeaderContainer>
         <H2>FREE COFFEE <br/> IS A TAP AWAY</H2>
         <div>
