@@ -11,6 +11,7 @@ import Extras from "./components/extras/Extras"
 import Cashorcard from "./components/cashorcard/Cashorcard"
 import Coming from "./components/coming/Coming"
 import Questions from "./components/questions/Questions"
+import Footer from "./components/footer/Footer"
 
 function App() {
   const [slider, setSlider] = useState(false);
@@ -28,6 +29,7 @@ function App() {
       <Cashorcard/>
       <Coming/>
       <Questions/>
+      <Footer/>
     </>
   )
 }
