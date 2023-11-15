@@ -17,7 +17,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    z-index: 3;
+    z-index: 7;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
@@ -28,6 +28,7 @@ export const A = styled.a`
     font-weight: 700;
     letter-spacing: .7px;
     cursor: pointer;
+    position: relative;
 
     ${props => props.slide && css`
         font-size: 1.2em;
@@ -42,6 +43,21 @@ export const A = styled.a`
     ${props => props.hover && css`
         &:hover {
             color: #008248;
+        }
+    `}
+
+    ${props => props.barra && css`
+        &::after {
+            content: "";
+            width: 80%;
+            height: 6px;
+            background-color: #008248;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
     `}
 `

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Flex } from "../../global/styles.global"
 import { H2, H3, P} from "../getting/styles"
 import { Img, Button } from "./styles"
@@ -5,7 +6,7 @@ import { Img, Button } from "./styles"
 
 import { data } from "./data"
 
-const Extras = () => {
+const Extras = ({ setNoLink }) => {
   return (
     <Flex column center container>
       <Flex column center>
@@ -20,7 +21,7 @@ const Extras = () => {
               <Flex column align_start768>
                 <H3>{ item.h3 }</H3>
                 <P start768>{ item.p }</P>
-                <Button>Learn more</Button>
+                <Button onClick={() => setNoLink("in")}>Learn more</Button>
               </Flex>
             </Flex>
           ))

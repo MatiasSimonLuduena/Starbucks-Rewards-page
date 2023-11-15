@@ -46,6 +46,7 @@ export const TopDiv = styled.div`
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        pointer-events: none;
     }
 
     @media (max-width: 1020px) {
@@ -55,6 +56,10 @@ export const TopDiv = styled.div`
         &:last-child {
             margin-bottom: 15px;
         }
+
+        div {
+            pointer-events: all;
+        }
     }
 `
 
@@ -62,6 +67,7 @@ export const TopA = styled.a`
     color: gray;
     margin: 10px 0;
     letter-spacing: .4px;
+    cursor: pointer;
 
     &:hover {
         color: black;

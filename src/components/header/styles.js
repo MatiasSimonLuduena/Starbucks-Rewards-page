@@ -13,6 +13,12 @@ export const FixedContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+
+    @media (max-width: 420px) {
+        span {
+            font-size: .85em;
+        }
+    }
 `
 
 // Header

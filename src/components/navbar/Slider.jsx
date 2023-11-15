@@ -8,7 +8,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons"
 import { A } from "./styles"
 import { Flex, Button } from "../../global/styles.global"
 
-const Slider = ({ slider, setSlider }) => {
+const Slider = ({ slider, setSlider, setNoLink }) => {
   return (
     <div
       className={`
@@ -20,17 +20,19 @@ const Slider = ({ slider, setSlider }) => {
       <div className={styles.containerIn} onClick={e => e.stopPropagation()}>
         <div style={{ height: 100 }}></div>
         <Flex column start>
-          <A slide>Menu</A>
+          <A slide onClick={() => setNoLink("in")}>Menu</A>
           <A slide>Rewards</A>
-          <A slide>Gift cards</A>
+          <A slide onClick={() => setNoLink("in")}>Gift cards</A>
         </Flex>
         <br/><hr/><br/>
         <Flex column start>
         <div>
-          <Button>Sign in</Button>
-          <Button black>Join now</Button>
+          <Button onClick={() => setNoLink("in")}>Sign in</Button>
+          <Button black onClick={() => setNoLink("in")}>Join now</Button>
         </div>
-        <A hover><FontAwesomeIcon icon={faLocationDot}/> Find a store</A>
+        <A hover onClick={() => setNoLink("in")}>
+          <FontAwesomeIcon icon={faLocationDot}/> Find a store
+        </A>
       </Flex>
       </div>
     </div>

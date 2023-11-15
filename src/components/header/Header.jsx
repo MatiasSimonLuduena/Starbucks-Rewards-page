@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 // styles
 import { HeaderContainer, H2, Span, A } from './styles';
 import { Button, Hidden, Show } from "../../global/styles.global"
 
-const Header = () => {
+const Header = ({ setNoLink }) => {
   return (
     <div>
       <HeaderContainer>
@@ -11,16 +12,18 @@ const Header = () => {
           <Span>Join now to start earning Rewards.</Span>
         </div>
         <Hidden>
-          <a><Button green m30>Join now</Button></a>
+          <a><Button green m30 onClick={() => setNoLink("in")}>Join now</Button></a>
         </Hidden>
         <Show>
-          <a><Button green m30>Join the app</Button></a>
+          <a><Button green m30 onClick={() => setNoLink("in")}>Join the app</Button></a>
         </Show>
         <Hidden>
-          <Span>Or <A>join in the app</A> for the best experience</Span>
+          <Span>
+            Or <A onClick={() => setNoLink("in")}>join in the app</A> for the best experience
+          </Span>
         </Hidden>
         <Show>
-          <Span><A>Or join online</A></Span>
+          <Span><A onClick={() => setNoLink("in")}>Or join online</A></Span>
         </Show>
       </HeaderContainer>
     </div>

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Container, H2, Img } from "./styles"
 import { P } from "../getting/styles"
 import { Button } from "../../global/styles.global"
 
-const Coming = () => {
+const Coming = ({ setNoLink }) => {
   return (
     <Container out>
       <Container in>
@@ -14,9 +15,9 @@ const Coming = () => {
           src="https://www.starbucks.com/weblx/images/rewards/loyalty-partnerships/delta-skymiles.png" alt="image"
           />
         <P>
-          <a>Link your Delta SkyMiles®</a> and Starbucks® Rewards accounts to earn 1 mile per $1* spent at Starbucks and double Stars on Delta travel days.
+          <a onClick={() => setNoLink("in")}>Link your Delta SkyMiles®</a> and Starbucks® Rewards accounts to earn 1 mile per $1* spent at Starbucks and double Stars on Delta travel days.
         </P>
-        <Button green>Join Starbucks® Rewards</Button>
+        <Button green onClick={() => setNoLink("in")}>Join Starbucks® Rewards</Button>
       </Container>
     </Container>
   )

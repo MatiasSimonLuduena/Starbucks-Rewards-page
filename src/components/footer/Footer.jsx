@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { icons, as, data } from "./data"
 
 import { Top, TopDiv, TopA, Bottom, LastDivBottom } from "./styles"
 
 import { useState } from "react"
 
-const Footer = () => {
+const Footer = ({ setNoLink }) => {
     const [hidden, setHidden] = useState([ false, false, false, false, false ]);
 
     const handleDivClick = (index) => {
@@ -25,7 +26,9 @@ const Footer = () => {
                         </svg>
                     </div>
                     { item.a.map((a, ind) => (
-                        <TopA key={ind} hidden={hidden[i]}>{a}</TopA>
+                        <TopA key={ind} hidden={hidden[i]} onClick={() => setNoLink("in")}>
+                            {a}
+                        </TopA>
                     )) }
                 </TopDiv>
             )) }
@@ -34,14 +37,16 @@ const Footer = () => {
             <hr/>
             <div style={{ marginTop: 30 }}>
                 { icons.map((item, i) => (
-                    <svg key={i}>
+                    <svg key={i} onClick={() => setNoLink("in")}>
                         <path d={item}></path>
                     </svg>
                 )) }
             </div>
             <LastDivBottom>
                 { as.map((item, i) => (
-                    <a key={i} dangerouslySetInnerHTML={{ __html: item }}></a>
+                    <a key={i} dangerouslySetInnerHTML={{ __html: item }}
+                        onClick={() => setNoLink("in")}
+                    ></a>
                 ))}
             </LastDivBottom>
             <p>© 2023 Starbucks Coffee Company. All rights reserved.</p>
